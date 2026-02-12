@@ -66,8 +66,7 @@ const images = [
   },
 ];
 
-const list = document.querySelector('.js-gallery');
-console.log();
+const list = document.querySelector('.gallery');
 function createGallery(images) {
   const markup = images
     .map(image => {

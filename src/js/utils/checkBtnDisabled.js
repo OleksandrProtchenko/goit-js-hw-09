@@ -1,9 +1,12 @@
 import refs from './refs';
 
 export function checkBtnDisabled(data) {
-  if (data.email !== '' && data.message !== '') {
-    refs.btn.disabled = false;
-  } else {
-    refs.btn.disabled = true;
+  if (data === undefined) {
+    return;
   }
+
+  const { email, message } = data;
+
+  email === '' ? (refs.btn.disabled = true) : (refs.btn.disabled = false);
+  message === '' ? (refs.btn.disabled = true) : (refs.btn.disabled = false);
 }
